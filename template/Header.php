@@ -849,7 +849,8 @@ function groovyMenu( $args = array() ) {
 			}
 		}
 
-		$output_html .= '<div class="gm-search-wrapper custom-search"><form action="https://jeanrois.com/" method="get" class="gm-search-wrapper-form"><div class="gm-form-group"><input placeholder="Search..." type="text" name="s" class="gm-search__input"><button type="submit" class="gm-search-btn"><i class="fa fa-search"></i></button></div></form></div>';
+		/* $output_html .= '<div class="gm-search-wrapper custom-search"><form action="https://jeanrois.com/" method="get" class="gm-search-wrapper-form"><div class="gm-form-group"><input placeholder="Search..." type="text" name="s" class="gm-search__input"><button type="submit" class="gm-search-btn"><i class="fa fa-search"></i></button></div></form></div>'; */
+			$output_html .= do_shortcode( '[aws_search_form]' );
 		/* if ( 'disable' !== $searchForm ) {
 			$searchIcon = 'gmi gmi-zoom-search';
 			if ( $styles->getGlobal( 'misc_icons', 'search_icon' ) ) {
