@@ -1009,7 +1009,6 @@ function groovyMenu( $args = array() ) {
 
 
 		$output_html .= '</div>'; // .gm-mobile-menu-container
-		$output_html .= '<div class="flex-grow-1"></div>';
 
 
 		ob_start();
@@ -1022,7 +1021,7 @@ function groovyMenu( $args = array() ) {
 		$output_html .= ob_get_clean();
 
 
-		$output_html .= '<div class="gm-mobile-action-area-wrapper d-flex justify-content-center align-items-center text-center mb-4 mt-5">';
+		$output_html .= '<div class="gm-mobile-action-area-wrapper d-flex justify-content-center align-items-center text-center" style="margin-top: 70px;">';
 
 		$searchForm = $groovyMenuSettings['searchForm'];
 		$searchIcon = 'gmi gmi-zoom-search';
@@ -1055,12 +1054,7 @@ function groovyMenu( $args = array() ) {
 			$output_html .= ob_get_clean();
 
 
-			$output_html .= '<div class="gm-search ' . ( $isFullScreen ? 'fullscreen' : 'gm-dropdown' ) . '">
-						<i class="gm-icon ' . esc_attr( $searchIcon ) . '"></i>
-						<span class="gm-search__txt">'
-			                . esc_html__( 'Search', 'groovy-menu' ) .
-			                '</span>
-					</div>';
+			$output_html .= do_shortcode( '[aws_search_form]' );
 
 		}
 		$output_html .= '<div class="gm-divider--vertical mx-4"></div>';
